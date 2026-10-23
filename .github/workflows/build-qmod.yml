@@ -13,14 +13,17 @@ jobs:
       - name: Check out mod source
         uses: actions/checkout@v4
 
-      - name: Set up Java
-        uses: actions/setup-java@v4
+          - name: Set up Java
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
 
-      - name: Install Android SDK and NDK
-        uses: android-actions/setup-android@v3
+      - name: Install stable Android SDK tools
+        uses: android-actions/setup-android@v4
+        with:
+          accept-android-sdk-licenses: true
+          packages: 'platform-tools'
       - name: Install NDK and CMake
         run: sdkmanager "ndk;27.2.12479018" "cmake;3.22.1" "platform-tools"
 
