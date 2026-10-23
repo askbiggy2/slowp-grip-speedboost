@@ -41,7 +41,8 @@ jobs:
 
       - name: Build Dobby hook library for Quest (ARM64)
         run: |
-         git clone --depth 1 https://github.com/jmpews/Dobby.git third_party/Dobby
+         git clone https://github.com/jmpews/Dobby.git third_party/Dobby
+git -C third_party/Dobby checkout 0932d69
 
           cmake \
             -S third_party/Dobby \
