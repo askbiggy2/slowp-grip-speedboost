@@ -1,0 +1,11 @@
+{
+  "_QPVersion": "0.1.1",
+  "name": "Slowp Right Grip Speed Boost",
+  "id": "slowp-right-grip-speed-boost",
+  "author": "Local prototype",
+  "version": "0.2.0",
+  "packageId": "com.CruelByte.Slowp",
+  "packageVersion": "0.99.144",
+  "description": "Prototype: hold right grip to increase board forward force by 25%; release to return to normal. Gravity is unchanged.",
+  "modFiles": ["libSlowpGripSpeedBoost.so"]
+}
