@@ -56,10 +56,10 @@ jobs:
 
           cmake --build third_party/Dobby/build --config Release -j2
 
-          DOBBY_LIB="$(find third_party/Dobby/build -type f -name 'libdobby.a' | head -n 1)"
-          test -n "$DOBBY_LIB"
-          echo "DOBBY_LIB=$DOBBY_LIB" >> "$GITHUB_ENV"
-
+         DOBBY_LIB="$(find "$PWD/third_party/Dobby/build" -type f -name 'libdobby.a' | head -n 1)"
+         test -n "$DOBBY_LIB"
+         echo "Found Dobby library: $DOBBY_LIB"
+         echo "DOBBY_LIB=$DOBBY_LIB" >> "$GITHUB_ENV"
       - name: Build Slowp mod library
         run: |
           cmake \
